@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Agent's Toolkit</title>
+<meta name="description" content="AI tools for real estate agents. Built solo in 2026, paused in September 2026. A record of what it was and why it stopped.">
+<meta property="og:title" content="The Agent's Toolkit">
+<meta property="og:description" content="AI tools for real estate agents. Built solo in 2026. Paused.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d1626'/><text x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='700' fill='%235fd4c4' text-anchor='middle'>AT</text></svg>">
+<style>
+:root{
+  --bg:#0a1220; --bg-2:#0e1828; --line:rgba(255,255,255,.09);
+  --ink:#e8eef6; --ink-2:#a9b8cc; --muted:#6d7f96;
+  --accent:#5fd4c4;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --serif:Georgia,"Times New Roman",serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(900px 600px at 78% -8%, rgba(95,212,196,.10), transparent 62%),
+    radial-gradient(700px 520px at 6% 12%, rgba(78,134,214,.11), transparent 60%);
+}
+.wrap{position:relative;z-index:1;max-width:660px;margin:0 auto;padding:0 20px 84px}
+
+header{padding:56px 0 0}
+.mark{display:flex;align-items:center;gap:11px}
+.badge{
+  width:34px;height:34px;border-radius:8px;flex:0 0 34px;
+  background:var(--bg-2);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:700;font-size:14px;color:var(--accent);
+}
+.mark b{font-weight:600;font-size:15.5px;letter-spacing:.01em}
+
+h1{
+  font-family:var(--serif);font-weight:400;font-style:italic;
+  font-size:clamp(28px,6.4vw,42px);line-height:1.22;
+  margin:38px 0 0;letter-spacing:-.01em;
+}
+.status{
+  display:inline-flex;align-items:center;gap:8px;margin-top:22px;
+  font-family:var(--mono);font-size:10.5px;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex:0 0 6px}
+
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+
+h2{
+  font-family:var(--mono);font-size:10.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+  margin:0 0 16px;
+}
+p{margin:0 0 17px;color:var(--ink-2)}
+p:last-child{margin-bottom:0}
+p strong{color:var(--ink);font-weight:600}
+
+.tools{list-style:none;margin:0;padding:0}
+.tools li{
+  padding:15px 0;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:98px 1fr;gap:16px;align-items:baseline;
+}
+.tools li:last-child{border-bottom:0}
+.tools .n{
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink);
+}
+.tools .d{color:var(--ink-2);font-size:15.5px;line-height:1.55}
+
+.note{
+  margin-top:22px;padding:15px 17px;border-radius:7px;
+  background:var(--bg-2);border:1px solid var(--line);
+  font-size:15.5px;color:var(--ink-2);
+}
+
+footer{
+  margin-top:52px;padding-top:26px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;
+}
+footer .who{color:var(--ink);font-weight:700}
+footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
+footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+@media (max-width:480px){
+  body{font-size:16px}
+  header{padding-top:40px}
+  .wrap{padding-bottom:64px}
+  .tools li{grid-template-columns:1fr;gap:4px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark"><span class="badge">AT</span><b>The Agent's Toolkit</b></div>
+    <h1>Every listing, every reply, in your voice.</h1>
+    <div class="status"><span class="dot"></span>Built solo, 2026 · Paused September 2026</div>
+  </header>
+
+  <hr>
+
+  <section>
+    <h2>What it was</h2>
+    <p>Software for real estate agents. One place to write listings, social captions and client follow-ups that actually sounded like the agent wrote them, and to track a deal from first contact through to close.</p>
+    <p>Four months, one person, <strong>product and design and code</strong>.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>What shipped</h2>
+    <ul class="tools">
+      <li><span class="n">Listing</span><span class="d">MLS details into full site copy, in a chosen tone and length. Address, price and beds came prefilled from the project.</span></li>
+      <li><span class="n">Social</span><span class="d">Captions for Instagram, Facebook, LinkedIn and TikTok, grounded in cited research on what performs rather than engagement tricks.</span></li>
+      <li><span class="n">Follow-Up</span><span class="d">Drafted against a real contact from the pipeline instead of a blank name field. Sending one reset that contact's follow-up clock.</span></li>
+      <li><span class="n">Reply</span><span class="d">Read a rejected offer and answered what was actually said, without inventing false hope or a reason to reconsider.</span></li>
+      <li><span class="n">Voice</span><span class="d">Calibrated once from real writing samples. Correct it in one place and every other tool carried the fix.</span></li>
+    </ul>
+    <div class="note">Underneath those: a project and client tracker, and an open-house QR code that turned a scan into a tracked lead before the visitor left the driveway.</div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Why it's paused</h2>
+    <p>I went looking for who would actually pay for it. Transaction management is a crowded, mature category, and nearly every product in it begins the moment a deal goes under contract.</p>
+    <p>The stretch before that is genuinely underserved. It is also where the agents who need the most help are the ones with the least money and the highest attrition, and the incumbents were already adding AI on top of the data and distribution they had. I could not find a position I could hold on my own.</p>
+    <p><strong>So I stopped, rather than finish a product I had stopped believing in.</strong> The code still exists. If a real reason to restart turns up, it will.</p>
+  </section>
+
+  <footer>
+    <span class="who">Eliy Miller</span>
+    <a href="https://linkedin.com/in/eliymiller" rel="noopener">linkedin.com/in/eliymiller</a>
+    <a href="mailto:eliymiller123@gmail.com">eliymiller123@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
